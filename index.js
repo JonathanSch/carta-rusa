@@ -7,4 +7,8 @@ const routes = require('./routes')
 app.use(express.json());
 app.use('/routes',routes)
 
+app.get('/', (req,res)=>{
+    res.send({message:'All great'}).status(200);
+})
+
 app.listen(port,(err)=>err?console.error(err):console.log(`Running on port ${port}`))
