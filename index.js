@@ -4,10 +4,10 @@ const port = process.env.PORT || 3000;
 
 require('./database');
 const routes = require('./routes')
-app.use(require('cors')());
 
 app.use(express.json());
 app.use('/routes',routes)
+app.use(require('cors')());
 
 app.get('/', (req,res)=>{
     res.send({message:'All great'}).status(200);
