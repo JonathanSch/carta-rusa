@@ -17,6 +17,7 @@ router.post('/crear',async (req,res)=>{
         const id = nanoid(10);
     const newPartida = new Partida({
         partidaId:id,
+        jugadores:[req.body.nuevoJugador]
     });
     await newPartida.save();
     res.send(newPartida).status(201);
