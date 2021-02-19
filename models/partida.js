@@ -12,6 +12,10 @@ const partidaSchema = new mongoose.Schema({
     cartas:{
         type:Array,
         default:[],
+    },
+    empezado:{
+        type:Boolean,
+        default:false,
     }
 })
 
